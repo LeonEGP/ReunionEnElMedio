@@ -1,9 +1,18 @@
+//Programa que: Implementa el Algoritmo de Meet In The Middle con Backtracking.
+//Programadores: León Emiliano García Pérez [A00573074], Carla Morales López [A01639225].
+//Fecha de entrega: Jueves 11 de Noviembre de 2022.
+
+//Inclusión de librerías.
 #include <bits/stdc++.h>
 
+//Ajuste a estandar.
 using namespace std;
 
-long long int valoresX[2000005],valoresY[2000005];
+//Definición de variables globales.
+long long int valoresX[2000005];
+long long int valoresY[2000005];
 
+//Función que calcula un subarreglo, reicbe dos arreglos de long long ints, uno a y uno x, un entero n y un entero c; no tiene valor de retorno ya que actualiza las variables que fueron enviadas como parámetro.
 void calcularSubArreglo(long long int a[], long long int x[], int n, int c) {
 
 	for (int i=0; i<(1<<n); i++){
@@ -19,7 +28,8 @@ void calcularSubArreglo(long long int a[], long long int x[], int n, int c) {
 
 }
 
-long long int solveSubsetSum(long long int a[], int n, long long int s) {
+//Función que implementa el algoritmo de Meet In The Middle, recibe un arreglo de long long ints, un entero n, y un lon long int s. Retorna el valor resultante long long int.
+long long int reunionEnElMedio(long long int a[], int n, long long int s) {
 
 	calcularSubArreglo(a, valoresX, n/2, 0);
 	calcularSubArreglo(a, valoresY, n-n/2, n/2);
@@ -52,9 +62,12 @@ long long int solveSubsetSum(long long int a[], int n, long long int s) {
 	return max;
 }
 
+//Función que ejecuta el código main driver de ejecución.
 int main() {
 
     int n;
+
+	cout << "Input: " << endl;
     cin >> n;
 
     long long int datos[n];
@@ -68,7 +81,8 @@ int main() {
     int s;
     cin >> s;
 
-    cout << "Resultado: " << solveSubsetSum(datos, n, s) << endl;
+    cout << "Output: " << endl;
+	cout << reunionEnElMedio(datos, n, s) << endl;
 
     return 0;
 }
