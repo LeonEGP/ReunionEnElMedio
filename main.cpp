@@ -89,7 +89,7 @@ int main() { //Dentro de su ejecución lineal, se encuentra un ciclo for con com
         datos[i] = aux;
     }
 
-    cout << "S:" << endl;
+    cout << "s:" << endl;
     cin >> objetivo;
 
     cout << "OUTPUT: " << endl;
