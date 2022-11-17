@@ -30,7 +30,7 @@ void calcularSubArreglo(long long int datos[], long long int x[], int n, int c) 
 }
 
 //Función que implementa el algoritmo de Meet In The Middle, recibe un arreglo de long long ints, un entero n, y un lon long int s. Retorna el valor resultante long long int.
-long long int reunionEnElMedio(long long int datos[], int n, long long int s) { //Complejidad Computacional: O(2^(b/2) log(2^(n/2))).
+long long int reunionEnElMedio(long long int datos[], int n, long long int s) { //Complejidad Computacional: O(2^(n/2) log(2^(n/2))).
 
 	calcularSubArreglo(datos, valoresX, n/2, 0); //Complejidad Computacional: O( (n/2) 2^ (n/2)).
 	calcularSubArreglo(datos, valoresY, n-n/2, n/2); //Complejidad Computacional: O((n-n/2) 2^ (n-n/2)).
@@ -83,7 +83,7 @@ int main() { //Dentro de su ejecución lineal, se encuentra un ciclo for con com
     cin >> s;
 
     cout << "Output: " << endl;
-	cout << reunionEnElMedio(datos, n, s) << endl; //Complejidad Computacional: O(2^(b/2) log(2^(n/2))).
+	cout << reunionEnElMedio(datos, n, s) << endl; //Complejidad Computacional: O(2^(n/2) log(2^(n/2))).
 
     return 0;
 }
