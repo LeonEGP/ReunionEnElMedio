@@ -46,11 +46,12 @@ long long int reunionEnElMedio(long long int datos[], int n, long long int objet
 	long long int max;
 	max = 0;
 
-	for (int i=0; i<tamanioX; i++) { //Complejidad Computacional: O(2^(n/2)).
+	for (int i=0; i<tamanioX; i++) { //Complejidad Computacional: O(2^(n/2))(L(n)).
 
 		if (valoresX[i] <= objetivo) {
 
-			int p = lower_bound(valoresY, valoresY+tamanioY, objetivo-valoresX[i]) - valoresY; //Complejidad Computacional: L(n).
+			int p;
+			p = lower_bound(valoresY, valoresY+tamanioY, objetivo-valoresX[i]) - valoresY; //Complejidad Computacional: L(n).
 
 			if (p == tamanioY || valoresY[p] != (objetivo-valoresX[i]))
 				p--;
