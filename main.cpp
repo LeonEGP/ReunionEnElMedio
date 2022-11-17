@@ -64,7 +64,7 @@ long long int reunionEnElMedio(long long int datos[], int n, long long int s) { 
 }
 
 //Función que ejecuta el código main driver de ejecución.
-int main() { //Dentro de su ejecución lineal, se encuentra un ciclo for con complejidad O(n), y se
+int main() { //Dentro de su ejecución lineal, se encuentra un ciclo for con complejidad O(n), y se ejecuta el algoritmo de solución para Meet In The Middle, de Complejidad  Computacional: O(2^(n/2) log(2^(n/2))).
 
     int n;
 
