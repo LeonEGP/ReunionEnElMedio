@@ -12,7 +12,7 @@ using namespace std;
 long long int valoresX[100000000];
 long long int valoresY[100000000];
 
-//Función que calcula un subarreglo, reicbe dos arreglos de long long ints, uno a y uno x, un entero n y un entero c; no tiene valor de retorno ya que actualiza las variables que fueron enviadas como parámetro.
+//Función que calcula un subarreglo, reicbe dos arreglos de long long ints, uno datos y uno x, un entero n y un entero c; no tiene valor de retorno ya que actualiza las variables que fueron enviadas como parámetro.
 void calcularSubArreglo(long long int datos[], long long int x[], int n, int c) { //Complejidad Computacional: O(n2^n).
 
 	//Complejidad Computacional: O(n2^n).
