@@ -50,9 +50,9 @@ long long int reunionEnElMedio(long long int datos[], int n, long long int objet
 
 		if (valoresX[i] <= objetivo) {
 
-			int p = lower_bound(valoresY, valoresY+tamanioY, s-valoresX[i]) - valoresY;
+			int p = lower_bound(valoresY, valoresY+tamanioY, objetivo-valoresX[i]) - valoresY;
 
-			if (p == tamanioY || valoresY[p] != (s-valoresX[i]))
+			if (p == tamanioY || valoresY[p] != (objetivo-valoresX[i]))
 				p--;
 
 			if ((valoresY[p]+valoresX[i]) > max)
